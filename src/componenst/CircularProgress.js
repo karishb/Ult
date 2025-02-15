@@ -1,31 +1,51 @@
 import React from 'react';
 import { View, Text, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { ProgressChart } from 'react-native-chart-kit';
+import { PieChart } from 'react-native-chart-kit';
 import styles from '../styles/style';
 
 const Graph = ({ monthlyProduction, totalCapacity }) => {
-  const data = {data: [monthlyProduction / totalCapacity]
-  };
+  // Calculate the remaining capacity
+  const remainingCapacity = totalCapacity - monthlyProduction;
+  
+  const data = [
+    {
+      name: 'Production',
+      population: monthlyProduction,
+      color: '#20B2AA', // Light sea green
+      legendFontColor: '#7F7F7F',
+      legendFontSize: 12,
+    },
+    {
+      name: 'Remaining',
+      population: remainingCapacity,
+      color: 'lightblue', // Light grey
+      legendFontColor: '#7F7F7F',
+      legendFontSize: 12,
+    },
+  ];
 
   return (
     <View style={styles.graphContainer}>
-     <Text style={styles.totalPlantsTitle}>Production Details</Text>
-     <Icon name="chevron-right" size={24} style={styles.iconRight} />
-     <View style={styles.line} />
-      <ProgressChart
+      <View style={styles.graphHeader}>
+        <Text style={styles.totalPlantsTitle}>Production Details</Text>
+      </View>
+      <View style={styles.line} />
+      <PieChart
         data={data}
-        width={Dimensions.get('window').width - 150} 
+        width={Dimensions.get('window').width - 20} // Full width minus padding
         height={220}
-        strokeWidth={16}
-        radius={70}
         chartConfig={{
-          backgroundColor: "#ffffff",
-          backgroundGradientFrom: "#ffffff",
-          backgroundGradientTo: "#ffffff",
-          color: ()=> `rgba(0, 128, 128, 0.4)`,
+          backgroundColor: '#ffffff',
+          backgroundGradientFrom: '#ffffff',
+          backgroundGradientTo: '#ffffff',
+          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
         }}
-        hideLegend={false}
+        accessor="population"
+        backgroundColor="transparent"
+        paddingLeft="0"
+        absolute
+        center={[0, 0]} // Adjust if needed to center the pie
       />
       <View style={styles.circularGraphTextContainer}>
         <Text style={styles.circularGraphText}>{`Monthly Production: ${monthlyProduction} kWh`}</Text>
@@ -34,4 +54,5 @@ const Graph = ({ monthlyProduction, totalCapacity }) => {
     </View>
   );
 };
+
 export default Graph;

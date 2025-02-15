@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { View, Text, SafeAreaView,Image,TouchableOpacity } from 'react-native';
 import AppBar from '../componenst/AppBar';
+import noAlert from '../assets/no-alert.jpg';
 import styles from '../styles/style';
 
 
@@ -26,7 +27,7 @@ const Alert = ({ navigation, Alert }) => {
     </View>
 
     <View style={styles.noAlertContainer}>
-      <Image source={require('../assets/no-alert.png')} style={styles.noAlertImage} /> 
+      <Image source={noAlert} style={styles.noAlertImage} /> 
       <Text style={styles.noAlertText}>No Alerts</Text>
     </View>
   </SafeAreaView>

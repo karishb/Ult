@@ -88,7 +88,10 @@ const Me = ({ navigation, route }) => {
             <Ionicons name="chevron-forward-outline" size={24} color="black" />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.menuItem}>
+          <TouchableOpacity 
+            style={styles.menuItem} 
+            onPress={() => navigation.navigate('AppSettings')}
+          >
             <Ionicons name="settings-outline" size={24} color="black" />
             <Text style={styles.menuText}>Settings</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="black" />
@@ -98,7 +101,5 @@ const Me = ({ navigation, route }) => {
     </SafeAreaView>
   );
 };
-
-
 
 export default Me;

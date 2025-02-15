@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image } from 'react-native';
-import bgImg from '../assets/cover.png';
+import bgImg from '../assets/cover.jpg';
 import styles from '../styles/style';
 
 const BackgroundImage = () => {

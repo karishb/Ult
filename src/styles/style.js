@@ -224,140 +224,55 @@ const styles = StyleSheet.create({
   },
 
 appBar: {
-  height: 60,
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-between',
-  paddingHorizontal: 15,
-  paddingVertical: 10,
-  backgroundColor: '#FFF',
-  elevation: 4,
-  zIndex: 1, 
+  paddingHorizontal: 16,
+  height: 56,
+  backgroundColor: '#fff',
+  borderBottomWidth: 0,
 },
 
-
-searchBox: {
-  flex: 1,
-  marginHorizontal: 10,
-  padding: 8,
-  borderRadius: 4,
-  backgroundColor: '#F0F0F0',
-},
-icon: {
-  width: 24,
-  height: 24,
-},
-contentContainer: {
-  padding: 20,
-},
-sectionTitle: {
-  fontSize: 18,
-  fontWeight: 'bold',
-  marginBottom: 60,
-},
-addPlantSectionTitle: {
-  fontSize: 18,
-  fontWeight: 'bold',
-  marginBottom: 30,
-  marginHorizontal: 15,
-},
-  watchlistContainer: {
-  backgroundColor: '#FFF', 
-  padding: 15,
-  borderRadius: 8,
-  marginHorizontal: 15,
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  shadowColor: '#000',
-  shadowOffset: { width: 0, height: 2 },
-  shadowOpacity: 0.2,
-  shadowRadius: 4,
-  elevation: 4, 
-  marginBottom: 20, 
-  marginTop: 80, 
-},
-
-  watchlistIcon: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  watchlistText: {
-    fontSize: 16,
-    marginLeft: 10,
-  },
-  arrowIcon: {
-    color: '#000',
-  },
-appBarContainer: {
-  width: '100%',
-  backgroundColor: '#FFDCDC',
-  elevation: 4,
-  shadowColor: '#000',
-  shadowOffset: { width: 0, height: 2 },
-  shadowOpacity: 0.1,
-  shadowRadius: 4,
-  paddingHorizontal: 15,
-  paddingVertical: 10,
-},
-safeArea: {
-  flex: 1,
-  backgroundColor: '#FFF',
-  padding: 0, 
-},
-signupSafeArea: {
-  flex: 1,
-  backgroundColor: '#FFF',
-  padding: 0, 
-  marginVertical: 20, 
-},
-MonitorSafeArea: {
-  flex: 1,
-  backgroundColor: '#FFF',
-  padding: 0, 
-},
-
-iconLeft: {
-    position: 'absolute',
-    left: 15,
-},
-iconRight: {
-  position: 'absolute',
-  right: 40,
-  // top:-2,
-},
-iconTab:{ position: 'absolute',
-  right: 40,
-  top:-2,},
-  
-title: {
+appBarTitle: {
   fontSize: 20,
   fontWeight: 'bold',
-  textAlign: 'center',
-  flex: 1,
- },
-
-searchContainer: {
-  flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 10,
-    backgroundColor: '#F0F0F0',
-    paddingHorizontal: 10,
-    marginHorizontal: 15,
-    borderRadius: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-},
-searchIcon: {
-  marginRight: 10,
   color: '#000',
 },
-searchBox: {
-  flex: 1,
-  paddingVertical: 8,
+
+iconButton: {
+  width: 40,
+  height: 40,
+  justifyContent: 'center',
+  alignItems: 'center',
 },
+
+searchContainer: {
+  paddingHorizontal: 16,
+  paddingVertical: 8,
+  backgroundColor: '#fff',
+},
+
+searchBox: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  backgroundColor: '#f5f5f5',
+  borderRadius: 8,
+  paddingHorizontal: 12,
+  height: 40,
+},
+
+searchIcon: {
+  marginRight: 8,
+},
+
+searchInput: {
+  flex: 1,
+  fontSize: 16,
+  color: '#000',
+  padding: 0,
+  height: '100%',
+},
+
 totalPlantsContainer: {
   backgroundColor: '#FFF', 
   padding: 15,
@@ -480,14 +395,52 @@ noPlantContainer: {
     paddingVertical: 10,
     backgroundColor: '#FFF', 
     },
+    arrowIcon: {
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignContent: 'center',
+      marginLeft:30,
+    },
+    watchlistContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#FFF',
+    borderRadius: 12,
+    padding: 16,
+    marginHorizontal: 16,
+    marginVertical: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+    marginBottom: 20,
+},
+watchlistLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+},
+watchlistText: {
+    fontSize: 16,
+    color: '#000',
+    marginLeft: 8,
+},
+arrowIcon: {
+    color: '#757575',
+},
   calendarContainer: {
+    marginVertical: 20,
+    marginBottom: 150,
     backgroundColor: '#FFF',
     borderRadius: 8,
     padding: 15,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
+    marginHorizontal: 15,
     shadowOpacity: 0.2,
     shadowRadius: 4,
+    elevation: 4,  
   },
     changeImageButton: {
     flexDirection: 'row',
@@ -789,6 +742,86 @@ sortTabItem: {
     justifyContent: 'space-around',
     marginVertical: 20,
     top: -30,
+  },
+  componentContainer: {
+    marginBottom: 20,
+    borderRadius: 8,
+    backgroundColor: '#fff',
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  toggleButton: {
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  toggleText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+  settingSection: {
+    marginBottom: 20,
+  },
+  toggleButton: {
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 10,
+    alignItems: 'center',
+    marginHorizontal: 16,
+  },
+  toggleButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  settingsContainer: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
+  settingOption: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  settingLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  settingText: {
+    fontSize: 16,
+    color: '#333',
+    marginLeft: 12,
+  },
+  settingRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  settingRightText: {
+    fontSize: 16,
+    color: '#999',
+    marginRight: 8,
+  },
+  logoutButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    marginTop: 20,
+    backgroundColor: '#fff',
+    gap: 8,
+  },
+  logoutText: {
+    color: '#FF6B6B',
+    fontSize: 16,
+    fontWeight: '500',
   },
 });
 

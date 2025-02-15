@@ -19,15 +19,22 @@
     ],
     "android": {
       "permissions": [
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
-      ]
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.karishma_bhatia.ultsolarman"
     },
     "ios": {
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "We need access to photo library to upload plant images",
         "NSCameraUsageDescription": "We need access to camera to take plant photos"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e82ef2b9-58ea-4858-afb4-d0d22c33feb6"
       }
     }
   }

@@ -37,7 +37,7 @@ const LoginScreen = ({ navigation }) => {
           <LinkComponent text="Forgot Password?" />
           <LinkComponent text="Local Mode" />
         </View>
-        <Button text="Log In" onPress={() => { navigation.navigate('BusinessSelection') }} />
+        <Button text="Log In" onPress={() => { navigation.navigate('Business') }} />
         <TouchableOpacity onPress={() => navigation.navigate('Reg')}>
           <Text style={styles.registerText}>Register</Text>
         </TouchableOpacity>
